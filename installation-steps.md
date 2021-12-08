@@ -128,6 +128,18 @@
 21. `genfstab -U /mnt >> /mnt/etc/fstab` This generates a fstab file to go.
 22. `arch-chroot /mnt` Change root to the base system install
 
+## Installation of yay binary
+
+- `git clone https://aur.archlinux.org/yay-bin.git ~/yay-bin`
+- `cd ~/yay-bin`
+- `makepkg -si`
+- `cd ~`
+- `rm -rf ~/yay-bin`
+
+## GPU Drivers (Intel + Nvidia Hybrid)
+
+- `yay -S mesa vulkan-intel intel-media-driver nvidia-dkms libva-vdpau-driver-vp9-git optimus-manager optimus-manager-qt`
+
 
 ## Create a swap file
 
