@@ -128,6 +128,13 @@
 21. `genfstab -U /mnt >> /mnt/etc/fstab` This generates a fstab file to go.
 22. `arch-chroot /mnt` Change root to the base system install
 
+## Installation of yay binary
+
+- `git clone https://aur.archlinux.org/yay-bin.git ~/yay-bin`
+- `cd ~/yay-bin`
+- `makepkg -si`
+- `cd ~`
+- `rm -rf ~/yay-bin`
 
 ## Create a swap file
 
@@ -243,7 +250,26 @@ passwd archguy
 systemctl enable NetworkManager
 systemctl enable bluetooth.service
 systemctl enable cups.service
+systemctl enable systemd-timesyncd.service
 ```
 54. Exit from chroot by running `exit`
 55. Unmount all `umount -a`
 56. Reboot `reboot`
+
+## After booting optimizations 
+
+- https://kenharris.xyz/posts/linux-tweaks#base-install
+- `yay -S gvfs gvfs-mtp polkit udisks2 adb zsh zsh-syntax-highlighting zsh-autosuggestions`
+
+## Oh-My-Zsh
+
+- `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+- Add following at end of .zshrc file 
+  ```
+  alias vim=nvim
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+  ```
+
+
