@@ -270,7 +270,11 @@ systemctl enable systemd-timesyncd.service
 
 - `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 - Add following at end of .zshrc file 
-  `alias vim=nvim
-   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-   source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh`
+  ```
+  alias vim=nvim
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+  ```
+
 
