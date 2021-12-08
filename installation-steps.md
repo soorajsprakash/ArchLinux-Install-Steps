@@ -136,11 +136,6 @@
 - `cd ~`
 - `rm -rf ~/yay-bin`
 
-## GPU Drivers (Intel + Nvidia Hybrid)
-
-- `yay -S mesa vulkan-intel intel-media-driver nvidia-dkms libva-vdpau-driver-vp9-git optimus-manager optimus-manager-qt`
-
-
 ## Create a swap file
 
 23. `truncate -s 0 /.swap/swapfile`
