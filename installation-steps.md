@@ -117,7 +117,7 @@
 
 15. `mount -o noatime,ssd,compress=lzo,space_cache=v2,subvol=@home /dev/sda2 /mnt/home` Mounts home subvolume into home folder.
 
-18. `mount -o nodatacow,subvol=@swap /dev/sda2 /mnt/swap` Mounts swap subvolume into swap folder.
+18. `mount -o nodatacow,subvol=@swap /dev/sda2 /mnt/.swap` Mounts swap subvolume into swap folder.
 
 19. `mount /dev/sda1 /mnt/boot` Mounts the boot partition into the boot folder.
 
