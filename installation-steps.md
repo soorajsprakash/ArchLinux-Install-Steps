@@ -243,6 +243,7 @@ passwd archguy
 systemctl enable NetworkManager
 systemctl enable bluetooth.service
 systemctl enable cups.service
+systemctl enable systemd-timesyncd.service
 ```
 54. Exit from chroot by running `exit`
 55. Unmount all `umount -a`
