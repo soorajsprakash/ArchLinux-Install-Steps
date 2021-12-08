@@ -202,7 +202,7 @@ FILE OFFSET  EXTENT TYPE  LOGICAL SIZE  LOGICAL OFFSET  PHYSICAL SIZE  DEVID  PH
 41. Create your root password by typing `passwd`
 42. Enable `multilib` repo to run 32 bit applications: Uncomment `[multilib]` and `Include` from `etc/pacman.conf`
 43. Install other package that you need/might need
-`pacman -S git reflector zsh zsh-completions bluez cups cups-pdf xdg-utils xdg-user-dirs xdg-user-dirs-gtk xdg-desktop-portal-gtk xdg-desktop-portal-gnome alsa-utils alsa-card-profiles pulseaudio pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer inetutils firefox vlc lollypop gimp shotwell transmission telegram-desktop steam wine winetricks mousetweaks`
+`pacman -S git reflector zsh zsh-completions bluez cups cups-pdf xdg-utils xdg-user-dirs xdg-user-dirs-gtk xdg-desktop-portal-gtk xdg-desktop-portal-gnome alsa-utils alsa-card-profiles pulseaudio pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer inetutils firefox vlc lollypop gimp shotwell transmission telegram-desktop steam wine winetricks mousetweaks optimus-manager optimus-manager-qt`
 
 
 ## Installing Gnome DE and other drivers
@@ -210,7 +210,7 @@ FILE OFFSET  EXTENT TYPE  LOGICAL SIZE  LOGICAL OFFSET  PHYSICAL SIZE  DEVID  PH
 
 43. Install intel drivers. `pacman -S mesa lib32-mesa mesa vulkan-intel intel-media-driver`
 44. Install xorg group  `pacman -S xorg`
-45. Install nvidia drivers `pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-lts `
+45. Install nvidia drivers `pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-lts nvidia-dkms` & `yay -S  libva-vdpau-driver-vp9-git`
 46. Install gnome: `pacman -S gnome gnome-extra gdm`
 
 
