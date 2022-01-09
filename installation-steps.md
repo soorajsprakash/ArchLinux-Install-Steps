@@ -272,4 +272,8 @@ systemctl enable systemd-timesyncd.service
 
   ```
 
+-----------------
 
+#### Sources:
+* [Arch Wiki](https://wiki.archlinux.org/)
+* [LinuxHint](https://linuxhint.com/create-mount-btrfs-subvolumes/)
