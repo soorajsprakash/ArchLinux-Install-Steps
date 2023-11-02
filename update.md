@@ -35,6 +35,15 @@
 
 * `chmod +x base.sh`
 
+SWAP
+* `fallocate -l 10GB /swapfile`
+* `chmod 600 /swapfile`
+* `mkswap /swapfile`
+* `swapon /swapfile`
+
+
+IN FSTAB
+* `/swapfile    none    swap    defaults    0   0`
 
 **systemd-boot**
 `bootctl --path=/boot install`
@@ -55,6 +64,27 @@ title   Arch Linnux
 linux   /vmlinuz-linux
 initrd /initramfs-linux.img
 options rootflags=subvol=@ rw video=1920x1080
+```
+
+EXAMPLE:
+```
+esp/loader/entries/arch.conf
+
+title   Arch Linux
+linux   /vmlinuz-linux
+initrd  /intel-ucode.img
+initrd  /initramfs-linux.img
+options root="LABEL=Arch OS" rw
+```
+
+```
+esp/loader/entries/arch-fallback.conf
+
+title   Arch Linux (fallback initramfs)
+linux   /vmlinuz-linux
+initrd  /intel-ucode.img
+initrd  /initramfs-linux-fallback.img
+options root="LABEL=Arch OS" rw
 ```
 
 * paru
